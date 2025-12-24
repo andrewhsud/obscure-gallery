@@ -1,0 +1,237 @@
+.gallery-app {
+  min-height: 100vh;
+}
+
+.gallery-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.gallery-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr);
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 28px;
+  background: linear-gradient(140deg, rgba(255, 255, 255, 0.9), rgba(248, 242, 231, 0.85));
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 20px 40px rgba(94, 78, 55, 0.1);
+  animation: riseIn 0.6s ease both;
+}
+
+.hero-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #9a846c;
+  margin: 0 0 0.75rem;
+}
+
+.hero-title {
+  font-family: 'Fraunces', serif;
+  font-size: 2.4rem;
+  margin: 0 0 1rem;
+  color: #1a1a1a;
+}
+
+.hero-description {
+  margin: 0;
+  font-size: 1rem;
+  color: #4c4c4c;
+  max-width: 36rem;
+}
+
+.hero-stats {
+  display: grid;
+  gap: 1rem;
+}
+
+.stat-card {
+  padding: 1rem 1.25rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #8a7460;
+}
+
+.stat-value {
+  font-weight: 600;
+  color: #2b2b2b;
+}
+
+.gallery-panels {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.gallery-panels .panel:nth-child(1) {
+  animation: riseIn 0.6s ease 0.1s both;
+}
+
+.gallery-panels .panel:nth-child(2) {
+  animation: riseIn 0.6s ease 0.2s both;
+}
+
+.panel {
+  background: #fffdf7;
+  border-radius: 24px;
+  padding: 1.75rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 18px 30px rgba(94, 78, 55, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.panel-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: #9a846c;
+  margin: 0 0 0.25rem;
+}
+
+.panel-title {
+  font-family: 'Fraunces', serif;
+  font-size: 1.4rem;
+  margin: 0;
+  color: #1e1e1e;
+}
+
+.panel-status {
+  font-size: 0.9rem;
+  color: #6a5a48;
+  margin: 0;
+}
+
+.panel-error {
+  color: #b0392e;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.panel-warning {
+  background: rgba(248, 219, 196, 0.6);
+  border-radius: 14px;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  color: #6a4a2f;
+}
+
+.panel-success {
+  background: rgba(214, 232, 212, 0.7);
+  border-radius: 14px;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  color: #2f5b3f;
+}
+
+.ghost-button {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: transparent;
+  color: #4a3f33;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ghost-button:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.primary-button,
+.secondary-button {
+  border: none;
+  padding: 0.75rem 1.2rem;
+  border-radius: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.primary-button {
+  background: #cb6d3f;
+  color: #fff8f0;
+  box-shadow: 0 12px 20px rgba(203, 109, 63, 0.25);
+}
+
+.primary-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 25px rgba(203, 109, 63, 0.3);
+}
+
+.secondary-button {
+  background: #efe7dc;
+  color: #3d2e24;
+}
+
+.secondary-button:hover {
+  transform: translateY(-1px);
+}
+
+.primary-button:disabled,
+.secondary-button:disabled,
+.ghost-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.full-width {
+  width: 100%;
+}
+
+@media (max-width: 980px) {
+  .gallery-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-panels {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .gallery-main {
+    padding: 2rem 1.1rem 3rem;
+  }
+
+  .panel {
+    padding: 1.4rem;
+  }
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

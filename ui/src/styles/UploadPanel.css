@@ -1,0 +1,102 @@
+.upload-panel {
+  position: relative;
+}
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.field-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #3d2e24;
+}
+
+.file-input {
+  padding: 0.6rem;
+  border-radius: 12px;
+  border: 1px dashed rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.preview-card {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.preview-image {
+  width: 100%;
+  height: 100px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.preview-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.text-input {
+  padding: 0.6rem 0.8rem;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background: #fff;
+  font-size: 0.95rem;
+}
+
+.empty-preview {
+  padding: 1.4rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px dashed rgba(0, 0, 0, 0.15);
+  color: #6a5a48;
+  text-align: center;
+}
+
+.hash-card {
+  display: grid;
+  gap: 0.75rem;
+  background: rgba(250, 244, 236, 0.8);
+  border-radius: 16px;
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.hash-label {
+  margin: 0 0 0.25rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #8a7460;
+}
+
+.hash-value {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #2c2c2c;
+  word-break: break-all;
+}
+
+@media (max-width: 640px) {
+  .preview-card {
+    grid-template-columns: 1fr;
+  }
+
+  .preview-image {
+    height: 160px;
+  }
+}
